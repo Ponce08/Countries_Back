@@ -21,10 +21,10 @@ const addCountriesBDD = async () => {
           population: country.population
         });
       });
-      console.log('information saved in the BD');
+      return console.log('information saved in the BD');
       // return res.send('Paises agregados correctamente')
     }
-    console.log('Error in the BD');
+    return console.log('BD update');
     // return res.send('Base de datos actualizada')
   } catch (error) {
     console.error(error);

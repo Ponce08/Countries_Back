@@ -6,8 +6,8 @@ const PORT = 3001;
 conn
   .sync({ force: true })
   .then(() => {
+    addCountriesBDD();
     server.listen(PORT, () => {
-      addCountriesBDD();
       console.log(`Server listening on port ${PORT}`);
     });
   })
