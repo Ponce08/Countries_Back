@@ -10,7 +10,7 @@ const addCountriesBDD = async () => {
 
     if (countriesBDD.length === 0) {
       // const { data } = await axios.get(`${END_POINT}`);
-      await API.countries.map(async (country) => {
+      API.countries.map(async (country) => {
         return await Country.create({
           id: country.cca3,
           name: country.name.common.toLowerCase(),
