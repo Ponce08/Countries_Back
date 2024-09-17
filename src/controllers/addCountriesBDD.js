@@ -1,15 +1,16 @@
-const axios = require('axios');
+// const axios = require('axios');
 require('dotenv').config();
-const { END_POINT } = process.env;
+// const { END_POINT } = process.env;
 const { Country } = require('../db');
+const API = require('../../db.json');
 
 const addCountriesBDD = async () => {
   try {
     const countriesBDD = await Country.findAll();
 
     if (countriesBDD.length === 0) {
-      const { data } = await axios.get(`${END_POINT}`);
-      await data.map(async (country) => {
+      // const { data } = await axios.get(`${END_POINT}`);
+      await API.map(async (country) => {
         return await Country.create({
           id: country.cca3,
           name: country.name.common.toLowerCase(),

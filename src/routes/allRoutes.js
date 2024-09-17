@@ -12,6 +12,6 @@ allRoutes.get('/', allCountries);
 allRoutes.get('/:id', countrieById);
 allRoutes.post('/post_activity', createActivity);
 allRoutes.get('/all_actvities', allActivities);
-allRoutes.post('/add', addCountriesBDD);
+
 
 module.exports = allRoutes;

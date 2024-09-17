@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3001;
 const startServer = async () => {
   try {
     await conn.sync({ force: false }); //! true borra
-    addCountriesBDD();
+    await addCountriesBDD();
     server.listen(PORT, () => console.log(`Server raised in port: ${PORT}`));
   } catch (error) {
     console.log('Server not started', error.message);
